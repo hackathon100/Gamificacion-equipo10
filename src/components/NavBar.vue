@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="xl" type="dark" variant="danger">
+    <b-navbar toggleable="xl" padding-left type="dark" variant="success">
       <b-navbar-brand href="#">HACKATOON2021</b-navbar-brand>
       <div></div>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
