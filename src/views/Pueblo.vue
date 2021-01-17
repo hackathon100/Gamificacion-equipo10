@@ -4,18 +4,6 @@
       oro<span class="badge bg-warning ">{{ oro }}</span>
     </h1>
 
-    <button id="show-modal" @click="showModal = true">Show Modal</button>
-    <!-- use the modal component, pass in the prop -->
-    <modal v-if="showModal" @close="showModal = false">
-      <!--
-      you can use custom content here to overwrite
-      default content
-    -->
-      <h3 slot="header">Mi header personalizado</h3>
-
-      <h3 slot="body">audio</h3>
-    </modal>
-
     <modal v-if="showModalCompositor" @close="showModalCompositor = false">
       <!--
       you can use custom content here to overwrite
@@ -32,7 +20,7 @@
       default content
     -->
       <div slot="header">
-        <trivia-audio-npc></trivia-audio-npc>
+        <trivia-audio-npc @close="showModalTrivia = false"></trivia-audio-npc>
       </div>
     </modal>
 
