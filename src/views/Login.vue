@@ -11,7 +11,9 @@
           >
          
 
+            
             <b-button type="submit" class=" boton" pill variant="success" lg="4" >Ingresar con tu cuenta GMAIL</b-button>
+            <a href="../analytics/analytics.html">Acceso Administrador</a>
           </b-form></b-col
         >
       </b-row>
