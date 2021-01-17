@@ -90,7 +90,6 @@ export default {
   components: { Modal, CompositorMusical, TriviaAudioNpc },
   methods: {
     ganaOro: function(oro) {
-      alert("ahora tengo mas oro");
       let cantidadOro = oro;
       this.$store.dispatch("aumentarOro", cantidadOro);
     },
