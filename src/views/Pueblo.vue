@@ -3,6 +3,18 @@
     <h1>
       oro<span class="badge bg-warning ">{{ oro }}</span>
     </h1>
+
+    <button id="show-modal" @click="showModal = true">Show Modal</button>
+    <!-- use the modal component, pass in the prop -->
+    <modal v-if="showModal" @close="showModal = false">
+      <!--
+      you can use custom content here to overwrite
+      default content
+    -->
+      <h3 slot="header">Mi header personalizado</h3>
+      <h3 slot="body">audio</h3>
+    </modal>
+
     <div class="row">
       <div class="col">
         <button v-on:click="ganaOro(10)">
@@ -102,8 +114,14 @@
 
 <script>
 import { mapState } from "vuex";
-
+import Modal from "../components/Modal";
 export default {
+  data() {
+    return {
+      showModal: false,
+    };
+  },
+  components: { Modal },
   methods: {
     ganaOro: function(oro) {
       alert("ahora tengo mas oro");
