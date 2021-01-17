@@ -48,7 +48,7 @@ export default {
             console.log(user);
             console.log("login realizado");
             // ...
-            this.$router.push({name: 'Pueblo'});
+            this.$router.push({name: 'Login'});
           })
           
           .catch((error) => {
