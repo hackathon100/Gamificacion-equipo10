@@ -1,0 +1,572 @@
+html {
+  height:100%;
+  background:#63D0FF;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background:#63D0FF;
+  height:100%;
+  font-family:Helvetica, Arial, Sans-Serif;
+  font-size:.9em;
+}
+
+body.archive{
+  background-color: #f5f5f6 !important;
+}
+
+header{
+  position:relative;
+  top:0;
+  width:100%;
+  height:120px;
+  overflow:hidden;
+}
+
+header>.logo{
+  position:relative;
+  z-index:3;
+  width:100%;
+  display:flex;
+  display:-ms-flexbox;
+  align-items: center;
+  justify-content: center;
+ /* padding-top:1%;*/
+}
+
+header>.logo>img{
+  float:left;
+}
+
+header>.logo>nav{
+  width:100%;
+  padding-right:191px;
+}
+
+header>.logo>nav>ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+   width: 100%; 
+  display: flex;
+  display: -ms-flexbox;
+  height: 40%;
+  float: right;
+}
+
+/*header>.logo>nav>ul>li{
+  float:left; 
+  /*width:18%;*//*
+  margin-left: 14px;
+  text-align:center;
+  color:#fff;
+  padding: 10px;
+}*/
+
+header>.logo>nav>ul>li>a{
+  float: left;
+  /* width: 18%; */
+  /* margin-left: 14px; */
+  text-align: center;
+  color: #fff;
+  padding: 14px;
+  display: flex;
+  vertical-align: middle;
+  /*align-items: center;*/
+  height: 100%;
+  width: 100%;
+  //*max-height: 20px;*//
+  vertical-align: middle; line-height: 20px;
+}
+
+header>.logo>nav>ul>li:last-child a{
+align-items: center;    line-height: 1px;
+}
+
+
+header>.logo>nav>ul>li:last-child{
+  float: right;
+  background-color: #ffcd04;
+  margin-right: 1px;
+  margin-left: 2%;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  /*top: 25%;*/
+  text-align: center;
+/*  padding-left: 50px;
+  padding-right: 50px;*/
+}
+
+
+
+.skdslider {width: 100%!important;height: auto!important;}
+
+
+
+
+@media only screen and (min-width: 1400px) {
+  header>.logo>nav>ul>li:last-child{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  header>.logo>nav>ul {
+    margin-right: 165px;
+    width:80%;
+  }
+}
+
+@media only screen and (min-width: 1580px) {
+  header>.logo>nav>ul {
+    width:70%;
+  }
+}
+
+li.current {
+    background-color: #ffcd04;
+    border-radius: 5px;
+}
+
+.search-box .buscar{
+  width: 85%;
+}
+
+.categorias li{
+  font-size: 14px;
+  font-family: arial;
+}
+
+.main.container-fluid{
+  background-color:#fff;
+  border-top:5vh solid #fff;
+  border-bottom:5vh solid #fff;
+}
+
+.categorias ul{
+  list-style-type:none;
+  padding:0;
+}
+
+.contenedor img{
+  max-width:100%;
+  height: 65vh;
+}
+
+.botom-10{
+  margin-bottom: 10px;
+}
+
+#clouds{
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/bg-clouds2-tinypng.png") repeat-x 0 bottom #ACE6FF;
+  width:100%;
+  height:160px; /*190px*/
+  min-height:160px;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+  -webkit-transform:translate3d(0,0,0.01);
+  transform:translate3d(0,0,0.01);
+}
+
+#ground {
+  background:url("../img/footer-150.png") repeat-x 0 0 transparent;    
+  position: fixed;
+  bottom: -95px;
+  left: 0;
+  z-index:2;
+  width: 100%;
+  height: 170px;
+  min-height:150px;
+  border:0 none transparent;
+  outline:0 none transparent;
+  -webkit-transform:translate3d(0,0,0.01);
+  transform:translate3d(0,0,0.01);
+  will-change: transform;
+}
+
+
+
+footer #ground span .row .col-sm-3 div b .wp-hit-counter{
+  background-image: url(../img/nube_footer.png);
+background-position: right;
+background-size:100%;width:93px;
+visibility: visible;overflow: visible;
+height: 60px; vertical-align: middle; margin-top: -10px;background-repeat: no-repeat; line-height: 60px}
+
+/************** Toltip *************/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/********** Empresa *************/
+.titulo_empresa{
+      font-family: Zapfino;
+    text-align: center;
+    display: block;
+    color: #22c7e0;
+    font-size: 25px;
+}
+
+.desc_empresa{
+  font-family: Helvetica;
+    margin-top: 15px;
+    color: #818181;
+    font-size: 15px;
+}
+
+.contenedor_empresa img{
+  max-width:100%;
+}
+
+.container_cate{
+      border-top: 5vh solid #f5f5f6 !important;
+    border-bottom: 5vh solid #f5f5f6 !important;
+    background-color: #f5f5f6 !important;
+}
+
+.wp-hit-counter{
+
+  display: block;
+  float: right;
+}
+.caja_cate {
+background-color: #ffffff;
+margin-bottom: 10px;
+padding: 10px 10px;
+}
+
+.img_cate{
+  width: 25%;
+}
+
+/********* Categoria Productos *********/
+
+.image_produ_cate {
+  background-color: #fff;
+  height: 300px;
+  float: left;
+  width: 90%;
+  overflow: hidden;;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+/*.image_produ_cate img{
+  background-color: #fff;
+}*/
+.datos_pro{
+  width: 100%;
+  float: left;
+  font-size: 13px;
+}
+.top-10{
+      margin-top: 12px;
+}
+.top-25{
+      height: 25px;
+      width: 100%
+}
+.cuadro_produ{
+  width: 90%;
+}
+
+/********** Single **************/
+
+.header-single {
+    height: 60vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.b-blanco {
+    background-color: #fff;
+}
+
+.info-titulo {
+    border-bottom: 1px solid #ccc;
+}
+
+.info-det-texto {
+    padding-top: 20px !important;
+    width: 95%;
+    text-align: justify;
+}
+.info-det-icons {
+    margin-top: 0px !important;
+}
+.info-det-leyenda {
+    margin-top: 15px !important;
+}
+.convenio {
+    border-bottom: 1px solid #ccc;
+}
+
+.precio {
+    width: 100%;
+    float: left;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.boton-coti {
+    margin-left: px;
+}
+
+.image_produ_edades img{
+  margin-bottom: 40px;
+  background-color: #fffff;
+}
+
+#ground span{
+  display:block;
+  padding-top: 26px;
+  width:100%;
+/*  align-items:center;
+  vertical-align:middle;*/
+  /*height:50%;*/
+  
+  color:#fff;
+}
+
+.responsive{
+  opacity: 0;
+  visibility: hidden;
+  height: 0; display: none;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1243px) {
+  header>.logo>nav>ul>li>a {
+    font-size: 12.5px !important;
+  }
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .responsive{
+      opacity: 1;
+      visibility: visible;
+      width:100%;
+      position:absolute;
+      top: 0;
+      z-index:5;
+      height: 20%;
+      /*overflow-y: scroll;*/
+      display: block;
+    }
+
+    header>.logo>nav{
+      display: none;
+    }
+
+    header{
+      /*height:100vh;*/
+    }
+
+    #menuToggle
+    {
+      display: block;
+      position: relative;
+      top: 5vh;
+      left: 5%;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    #menuToggle input
+    {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      
+      cursor: pointer;
+      
+      opacity: 0; /* hide this */
+      z-index: 2; /* and place it over the hamburger */
+      
+      -webkit-touch-callout: none;
+    }
+
+    /*
+     * Just a quick hamburger
+     */
+    #menuToggle span
+    {
+      display: block;
+      width: 42px;
+      height: 7px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #fff;
+      border-radius: 3px;
+      z-index: 1;
+      border: 1px solid #63d0ff;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child
+    {
+      transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2)
+    {
+      transform-origin: 0% 100%;
+    }
+
+    /* 
+     * Transform all the slices of hamburger
+     * into a crossmark.
+     */
+    #menuToggle input:checked ~ span
+    {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323;
+    }
+
+    /*
+     * But let's hide the middle one.
+     */
+    #menuToggle input:checked ~ span:nth-last-child(3)
+    {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+     * Ohyeah and the last one should go the other direction
+     */
+    #menuToggle input:checked ~ span:nth-last-child(2)
+    {
+      opacity: 1;
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+     * Make this absolute positioned
+     * at the top left of the screen
+     */
+    #menu
+    {
+      position: absolute;
+      width: 100%;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+      
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+      
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menu li
+    {
+      padding: 10px 0;
+      font-size: 22px;
+    }
+
+    /*
+     * And let's fade it in from the left
+     */
+    #menuToggle input:checked ~ ul
+    {
+      transform: scale(1.0, 1.0);
+      opacity: 1;
+    }
+}
+
+.row.col-md-8, .info {
+    display: block!important;
+}
+
+.boton-coti{background:#008bff;color:#fff; padding:5px;border: none; border-radius: 3px;}
+.boton-coti:hover{cursor:pointer;}
+@media (max-width: 1098px) {
+  .row.cotiza-cont.single-inf.col-md-12{
+        -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .col-lg-4.cotizar{
+        -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    float: left;
+    width: 100%;
+  }
+}
+
+
+.skdslider ul.slides li{width: 100%;height: 80%;}
+
+
+

@@ -8,7 +8,7 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item :to="{ name: 'Login' }">Inicio</b-nav-item>
-          <b-nav-item :to="{ name: 'Pueblo' }">Pueblo</b-nav-item>
+          <b-nav-item :to="{ name: 'Pueblo' }">Zona Norte</b-nav-item>
           
           
         </b-navbar-nav>

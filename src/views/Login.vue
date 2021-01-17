@@ -1,10 +1,10 @@
 <template>
   <div class="">
     <b-container class="my-5">
-      <h1 class="">Bienvenido</h1>
+      <h1 class="">Bienvenido a DoReMi-CHILE</h1>
 
       <b-row>
-        <b-col><img alt="Vue logo" src="../assets/logo.png" /></b-col>
+        <b-col><img alt="Vue logo" class="text-center" src="../assets/logo.png" /></b-col>
         <b-col class="my-5 text-center">
           <b-form
             @submit.prevent="loginUser"
@@ -13,6 +13,7 @@
 
             
             <b-button type="submit" class=" boton" pill variant="success" lg="4" >Ingresar con tu cuenta GMAIL</b-button>
+            <br>
             <a href="../analytics/analytics.html">Acceso Administrador</a>
           </b-form></b-col
         >
