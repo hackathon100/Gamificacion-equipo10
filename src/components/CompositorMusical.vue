@@ -5,44 +5,38 @@
       {{ this.arregloMusical }}
     </div>
     <div class="botones-instrumentos mx-auto">
-      <b-container fluid class="p-4">
+      <b-container fluid class="">
         <b-row>
           <b-col>
-            <b-img
-              v-bind="mainProps"
-              src="https://picsum.photos/250/250/?image=54"
-              rounded="circle"
-              alt="Circle image"
-              v-on:click="agregarAgregloMusical('instrumento 1')"
-            >
-            </b-img>
+            <img
+              src="../assets/instrumentos/charango3final.png"
+              class="img-fluid"
+              alt="charango"
+              v-on:click="agregarAgregloMusical('charango')"
+            />
           </b-col>
           <b-col>
-            <b-img
-              v-bind="mainProps"
-              src="https://picsum.photos/250/250/?image=54"
-              rounded="circle"
-              alt="Circle image"
-              v-on:click="agregarAgregloMusical('instrumento 2')"
-            >
-            </b-img>
+            <img
+              src="../assets/instrumentos/bomboleguero1.png"
+              class="img-fluid"
+              alt="bombo"
+              v-on:click="agregarAgregloMusical('bombo')"
+            />
           </b-col>
           <b-col>
-            <b-img
-              v-bind="mainProps"
-              src="https://picsum.photos/250/250/?image=54"
-              rounded="circle"
-              alt="Circle image"
-              v-on:click="agregarAgregloMusical('instrumento 3')"
-            >
-            </b-img>
+            <img
+              src="../assets/instrumentos/quenafinal.png"
+              class="img-fluid"
+              alt="quena"
+              v-on:click="agregarAgregloMusical('quena')"
+            />
           </b-col>
         </b-row>
       </b-container>
     </div>
     <div class="controles-sonido mt-5">
       <button>play</button>
-      <button>stop</button>
+      <button @click="$emit('close')">stop</button>
     </div>
   </div>
 </template>

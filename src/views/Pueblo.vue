@@ -12,6 +12,15 @@
       <div slot="header">
         <compositor-musical></compositor-musical>
       </div>
+      <div name="footer">
+        Listo para Guardar?
+        <button
+          class="modal-default-button"
+          @click="showModalCompositor = false"
+        >
+          Guardar
+        </button>
+      </div>
     </modal>
 
     <modal v-if="showModalTrivia" @close="showModalTrivia = false">
