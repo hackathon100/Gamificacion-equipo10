@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <h1>Compositor Musical</h1>
+    <h1>Creacion Musical</h1>
     <div class="arreglo-musical">
       {{ this.arregloMusical }}
     </div>

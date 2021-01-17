@@ -1,17 +1,9 @@
 <template>
   <div>
     <b-row>
-      <h1>trivia audio</h1>
+      <h1>Trivia</h1>
     </b-row>
-    <b-row>
-      <h3>
-        Para mi pueblo es muy importante contar historias desde los mas grandes
-        a los más chiquititos. Por eso somos muy buenos para las adivinanzas. A
-        ver si puedes resolver esta: Me agradecen en celebraciones sin mi no
-        podrían ser tan comilones me gusta el charango, la quena y la caja me
-        llaman Madre Tierra y también_____________?
-      </h3>
-    </b-row>
+    <b-row> </b-row>
     <b-row>
       <Button @click="play">PLAY</Button>
     </b-row>
