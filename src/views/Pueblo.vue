@@ -20,7 +20,7 @@
       default content
     -->
       <div slot="header">
-        <trivia-audio-npc></trivia-audio-npc>
+        <trivia-audio-npc @close="showModalTrivia = false"></trivia-audio-npc>
       </div>
     </modal>
 
