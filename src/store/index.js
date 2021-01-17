@@ -8,6 +8,7 @@ export default new Vuex.Store({
     return {
       oro:0,
       user: null,
+      arregloMusical:[],
     }
   },
   mutations: {
