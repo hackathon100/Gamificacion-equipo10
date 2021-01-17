@@ -1,4 +1,4 @@
-<template></template>
+<template> <div>trivia audio</div></template>
 
 <script>
 export default {};
