@@ -2,7 +2,7 @@
   <div class="">
     <h1>Compositor Musical</h1>
     <div class="arreglo-musical">
-      {arregloMusical}
+      {{ this.arregloMusical }}
     </div>
     <div class="botones-instrumentos mx-auto">
       <b-container fluid class="p-4">
@@ -13,7 +13,7 @@
               src="https://picsum.photos/250/250/?image=54"
               rounded="circle"
               alt="Circle image"
-              v-on:click="agreglarAgregoMusical('instrumento 1')"
+              v-on:click="agregarAgregloMusical('instrumento 1')"
             >
             </b-img>
           </b-col>
@@ -23,7 +23,7 @@
               src="https://picsum.photos/250/250/?image=54"
               rounded="circle"
               alt="Circle image"
-              v-on:click="agreglarAgregoMusical('instrumento 2')"
+              v-on:click="agregarAgregloMusical('instrumento 2')"
             >
             </b-img>
           </b-col>
@@ -33,7 +33,7 @@
               src="https://picsum.photos/250/250/?image=54"
               rounded="circle"
               alt="Circle image"
-              v-on:click="agreglarAgregoMusical('instrumento 3')"
+              v-on:click="agregarAgregloMusical('instrumento 3')"
             >
             </b-img>
           </b-col>
@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
@@ -58,10 +60,14 @@ export default {
     };
   },
   methods: {
-    agreglarAgregoMusical(boton) {
-      console.log("apretado", boton);
-      this.$store.dispatch("aumentarOro", cantidadOro);
+    agregarAgregloMusical(instrumento) {
+      console.log("apretado", instrumento);
+      this.$store.dispatch("agregarAgregloMusical", instrumento);
+      console.log("que tiene el arreglo", this.arregloMusical);
     },
+  },
+  computed: {
+    ...mapState(["arregloMusical"]),
   },
 };
 </script>

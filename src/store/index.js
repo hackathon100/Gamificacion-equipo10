@@ -18,6 +18,9 @@ export default new Vuex.Store({
     mutandoUser(state, usuario){
       return state.user = usuario;
    },
+   setAgregloMusical(state, payload) {
+    state.arregloMusical =[...state.arregloMusical,payload];
+  },
   },
   getters: {
     enviandoUser(state){
@@ -31,6 +34,9 @@ export default new Vuex.Store({
     dataUser({commit}, usuario){
       commit('mutandoUser', usuario);
    },
+   agregarAgregloMusical({commit},instrumento){
+    commit("setAgregloMusical",instrumento);
+  },
   },
 
   modules: {
