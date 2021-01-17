@@ -10,9 +10,7 @@
           </div>
 
           <div class="modal-body">
-            <slot name="body">
-              default body
-            </slot>
+            <slot name="body"> </slot>
           </div>
 
           <div class="modal-footer">
@@ -52,7 +50,7 @@ export default {};
 }
 
 .modal-container {
-  width: 300px;
+  width: 100%;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
