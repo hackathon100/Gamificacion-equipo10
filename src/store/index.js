@@ -4,21 +4,24 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state() {
-    return {
-      oro:0,
-    }
+  state: {
+    user: null,
   },
-  mutations: {
-    setOro(state, payload) {
-      state.oro += payload;
+  getters: {
+    enviandoUser(state){
+      return state.user;
     },
   },
-  actions: {
-    aumentarOro({commit},cantidadOro){
-      commit("setOro",cantidadOro);
-    }
+  mutations: {
+    mutandoUser(state, usuario){
+      return state.user = usuario;
+   },
   },
-  modules: {
-  }
+  actions: {
+
+    dataUser({commit}, usuario){
+      commit('mutandoUser', usuario);
+},
+  },
+ 
 })
