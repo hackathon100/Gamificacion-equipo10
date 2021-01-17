@@ -1,108 +1,77 @@
 <template>
   <div class="container">
     <h1>
-      oro<span class="badge bg-warning ">{{ oro }}</span>
+      oro<span class="badge bg-warning ml-4 ">{{ oro }}</span>
     </h1>
-    <div class="row">
+    <div class="row my-5 mb-4">
       <div class="col">
         <button v-on:click="ganaOro(10)">
           <img
-            src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
+            src="../assets/suri.png"
             class="img-fluid"
-            alt="..."
+            alt="suri"
           />
         </button>
       </div>
       <div class="col">
-        <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
+      <button type="submit" @click="play">
+      <img
+          src="../assets/abuelo.png"
           class="img-fluid"
-          alt="..."
+          alt="abuelo-aymara"
         />
+      
+      </button>
+        
       </div>
       <div class="col">
         <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
+          src="../assets/yareta.jpg"
           class="img-fluid"
-          alt="..."
+          alt="pachamama"
         />
       </div>
     </div>
     <div class="row">
       <div class="col">
         <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
+          src="../assets/ninaaymara.png"
           class="img-fluid"
-          alt="..."
+          alt="nina-aymara"
         />
       </div>
       <div class="col">
         <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
+          src="../assets/cactus.png"
           class="img-fluid"
-          alt="..."
+          alt="cactus"
         />
       </div>
       <div class="col">
         <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
+          src="../assets/vicuna.png"
           class="img-fluid"
-          alt="..."
+          alt="vicuna"
         />
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
-          class="img-fluid"
-          alt="..."
-        />
-      </div>
-      <div class="col">
-        <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
-          class="img-fluid"
-          alt="..."
-        />
-      </div>
-      <div class="col">
-        <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
-          class="img-fluid"
-          alt="..."
-        />
-      </div>
+      
+    
+     
     </div>
     <div class="row">
-      <div class="col">
-        <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
-          class="img-fluid"
-          alt="..."
-        />
-      </div>
-      <div class="col">
-        <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
-          class="img-fluid"
-          alt="..."
-        />
-      </div>
-      <div class="col">
-        <img
-          src="https://www.turismodeobservacion.com/media/fotografias/norte-de-chile-cactus-y-flores-23684-xl.jpg"
-          class="img-fluid"
-          alt="..."
-        />
-      </div>
+     
+      
+   
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
-
+import useSound from 'vue-use-sound';
+import buttonSfx from '../assets/musicaguitarra.mp3';
 export default {
   methods: {
     ganaOro: function(oro) {
@@ -114,7 +83,19 @@ export default {
   computed: {
     ...mapState(["oro"]),
   },
+
+  setup(){
+    const [play] = useSound(buttonSfx)
+     return{ 
+
+      play,
+    }
+  },
+
+ 
 };
 </script>
 
-<style></style>
+<style>
+  
+</style>
