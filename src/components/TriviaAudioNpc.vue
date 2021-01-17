@@ -13,39 +13,33 @@
       </h3>
     </b-row>
     <b-row>
-      <Button @click="handleClick">PLAY</Button>
+      <Button @click="play">PLAY</Button>
     </b-row>
     <b-row>
       <b-col>
-        <b-img
-          v-bind="mainProps"
-          src="https://picsum.photos/250/250/?image=54"
-          rounded="circle"
-          alt="Circle image"
+        <img
+          src="../assets/trivia/cactus.png"
+          class="img-fluid"
+          alt="suri"
           v-on:click="RespuestaIncorrecta"
-        >
-        </b-img>
+        />
       </b-col>
       <b-col>
-        <b-img
-          v-bind="mainProps"
-          src="https://picsum.photos/250/250/?image=54"
-          rounded="circle"
-          alt="Circle image"
+        <img
+          src="../assets/trivia/yareta.jpg"
+          class="img-fluid"
+          alt="suri"
           v-on:click="RespuestaIncorrecta"
-        >
-        </b-img>
+        />
       </b-col>
       <b-col>
-        <b-img
-          v-bind="mainProps"
-          src="https://picsum.photos/250/250/?image=54"
-          rounded="circle"
-          alt="Circle image"
+        <img
+          src="../assets/trivia/pachamama.jpg"
+          class="img-fluid"
+          alt="suri"
           v-on:click="RespuestaCorrecta"
           @click="$emit('close')"
-        >
-        </b-img>
+        />
       </b-col>
     </b-row></div
 ></template>
@@ -54,7 +48,16 @@
 //import LocucionTrivia from "../assets/locuciones/6.LocucionHackathon-Niñatrivia.mp3";
 //import useSound from "vue-use-sound";
 //import { ref } from "vue";
+import useSound from "vue-use-sound";
+import buttonSfx from "../assets/locuciones/6.LocucionHackathon-Niñatrivia.mp3";
+
 export default {
+  setup() {
+    const [play] = useSound(buttonSfx);
+    return {
+      play,
+    };
+  },
   data() {
     return {
       mainProps: {

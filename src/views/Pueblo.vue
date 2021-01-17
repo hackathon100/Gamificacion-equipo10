@@ -34,14 +34,12 @@
         />
       </div>
       <div class="col">
-        <button type="submit" @click="play">
-          <img
-            src="../assets/abuelo.png"
-            class="img-fluid"
-            alt="abuelo-aymara"
-            v-on:click="showModalCompositor = true"
-          />
-        </button>
+        <img
+          src="../assets/abuelo.png"
+          class="img-fluid"
+          alt="abuelo-aymara"
+          v-on:click="showModalCompositor = true"
+        />
       </div>
       <div class="col">
         <img
@@ -58,6 +56,7 @@
           src="../assets/ninaaymara.png"
           class="img-fluid"
           alt="nina-aymara"
+          @click="play"
         />
       </div>
       <div class="col">
