@@ -13,7 +13,7 @@
       </h3>
     </b-row>
     <b-row>
-      <button>AUDIO PREGUNTA</button>
+      <Button @click="handleClick">PLAY</Button>
     </b-row>
     <b-row>
       <b-col>
@@ -51,6 +51,9 @@
 ></template>
 
 <script>
+//import LocucionTrivia from "../assets/locuciones/6.LocucionHackathon-Niñatrivia.mp3";
+//import useSound from "vue-use-sound";
+//import { ref } from "vue";
 export default {
   data() {
     return {
@@ -62,10 +65,13 @@ export default {
   },
   methods: {
     RespuestaCorrecta() {
-      alert("genial");
+      alert("Felicitaciones tu respuesta es correcta");
     },
     RespuestaIncorrecta() {
-      alert("Vuelve a intentarlo");
+      alert("De los errores se aprende");
+    },
+    handleClick() {
+      alert("reproducir sonido");
     },
   },
 };
