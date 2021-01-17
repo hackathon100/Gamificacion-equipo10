@@ -72,7 +72,4 @@ export default {
 };
 </script>
 
-<style>
-.botones-instrumentos {
-}
-</style>
+<style></style>
